@@ -24,6 +24,7 @@
                 {% endfor %}				
             </tbody>
         </table>
+		{% if items|length > 0 %}
 		<div>
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 
@@ -47,5 +48,6 @@
 
 				</form>
         </div>
+		{% endif %}
     </div>
 {% endblock %}
