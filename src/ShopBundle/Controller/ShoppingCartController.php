@@ -23,7 +23,7 @@ class ShoppingCartController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         
-		$items = $em->getRepository('ShopBundle:ShoppingCart')->find(2);
+		$items = $em->getRepository('ShopBundle:ShoppingCart')->find(1);
 
 		if(!$items)
 		{ 
@@ -52,7 +52,7 @@ class ShoppingCartController extends Controller
         }
 
         // quick and dirty fix since there are no users logged in which can be used to fetch "their" shopping cart
-        $basket = $em->getRepository('ShopBundle:ShoppingCart')->find(2);
+        $basket = $em->getRepository('ShopBundle:ShoppingCart')->find(1);
 		
 		if(!$basket)
 		{ 
